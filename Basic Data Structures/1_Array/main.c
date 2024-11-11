@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define INT_UNALLOC -128 // manually set the size of unallocated values (for some reason windows is using 8bit signed integers)
 
@@ -10,6 +9,8 @@ typedef struct {
 } intArray;
 
 void initArray(intArray *arr, int capacity){
+    // the cast ensures that the block of memory is separated by integers, and that integer values will be there
+    // default value is void (any type can be casted). It is not necessary to cast in C
     arr->ptr = (int *)malloc(capacity * sizeof(int)); // create the block of contiguous memory
     arr->capacity = capacity;
     for(int i = 0; i < capacity; i++){ // initialize values to max int size
