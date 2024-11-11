@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../OSCode"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdlib.h": "c",
+			"unistd.h": "c",
+			"types.h": "c",
+			"stat.h": "c"
+		}
+	}
+}
